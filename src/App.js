@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import './Custom.css';
-import Feedback from './components/FeedBack';
+import Feedback from './components/FeedBackData';
 
 function App() {
   return (
