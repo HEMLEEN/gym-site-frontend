@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from '../api'
+import axios from 'axios'
 const Feedback = () => {
 const [userData, setUserData] = useState({
   name: '',
