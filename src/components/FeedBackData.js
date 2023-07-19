@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from '../api'
 const Feedback = () => {
-  // const base_url = process.env.REACT_APP_API_URL || 'https://lifechangefitness-gym.onrender.com/api'
 const [userData, setUserData] = useState({
   name: '',
   email: '',
