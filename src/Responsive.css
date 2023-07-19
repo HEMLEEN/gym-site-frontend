@@ -1,0 +1,35 @@
+@media only screen and (max-width:350px) {
+    input,
+    textarea {
+   margin: 0 10px;
+      width: 100%;
+      max-width: 330px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+    }
+}
+
+@media only screen and (max-width:475px) {
+    .card {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        max-height: 500px;
+        max-width: 400px;
+        background: rgb(187, 187, 245);
+        box-shadow: 0 0 40px 20px rgba(0, 0, 0, 26);
+        perspective: 1000px;
+    }
+    input,
+    textarea {
+        margin: 0 20px;
+      width: 100%;
+      max-width: 330px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+    }
+}
