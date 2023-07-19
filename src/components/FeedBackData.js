@@ -1,40 +1,34 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-const base_url = process.env.APP_URL
+import axios from '../api'
 const Feedback = () => {
-  const [userData, setUserData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    address: '',
-    weightGain: false,
-    weightLoss: false,
-    attendance: '',
-  });
+  // const base_url = process.env.REACT_APP_API_URL || 'https://lifechangefitness-gym.onrender.com/api'
+const [userData, setUserData] = useState({
+  name: '',
+  email: '',
+  message: '',
+  address: '',
+  weightGain: false,
+  weightLoss: false,
+  attendance: '',
+});
 
-  const handleClick = async (e) => {
-    e.preventDefault(); 
-    try {
-      const response = await axios.post(
-        base_url,
-        userData 
-      );
-      console.log('==============', response);
-      
-      setUserData({
-        name: '',
-        email: '',
-        message: '',
-        address: '',
-        weightGain: false,
-        weightLoss: false,
-        attendance: '',
-      });
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
-
+const handleClick = async (e) => {
+  e.preventDefault();
+  try {
+    await axios.post(`${process.env.REACT_APP_API_URL}/api`, userData);
+    setUserData({
+      name: '',
+      email: '',
+      message: '',
+      address: '',
+      weightGain: false,
+      weightLoss: false,
+      attendance: '',
+    });
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
   return (
     <div className='container'>
       <div className='card'>
@@ -124,5 +118,4 @@ const Feedback = () => {
     </div>
   );
 };
-
 export default Feedback;
