@@ -14,7 +14,7 @@ const [userData, setUserData] = useState({
 const handleClick = async (e) => {
   e.preventDefault();
   try {
-    await axios.post(`${process.env.REACT_APP_API_URL}`, userData);
+    await axios.post(`${process.env.REACT_APP_API_URL}/api`, userData);
     setUserData({
       name: '',
       email: '',
