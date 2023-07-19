@@ -5,6 +5,7 @@ const Feedback = () => {
     name: '',
     email: '',
     message: '',
+    phone:'',
     address: '',
     weightGain: false,
     weightLoss: false,
@@ -14,11 +15,12 @@ const Feedback = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/api`, userData);
+      await axios.post(`${process.env.REACT_APP_API_URL}`, userData);
       setUserData({
         name: '',
         email: '',
         message: '',
+        contact:'',
         address: '',
         weightGain: false,
         weightLoss: false,
@@ -71,6 +73,19 @@ const Feedback = () => {
                   value={userData.email}
                   onChange={(e) =>
                     setUserData({ ...userData, email: e.target.value })
+                  }
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type='number'
+                  className='input-box'
+                  name='number'
+                  id='number'
+                  required
+                  value={userData.contact}
+                  onChange={(e) =>
+                    setUserData({ ...userData, contact: e.target.value })
                   }
                 />
               </div>
