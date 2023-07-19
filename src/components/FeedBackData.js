@@ -82,6 +82,7 @@ const Feedback = () => {
                   className='input-box'
                   name='number'
                   id='number'
+                  placeholder='pickup your number'
                   required
                   value={userData.contact}
                   onChange={(e) =>
